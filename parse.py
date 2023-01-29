@@ -16,19 +16,19 @@ def getParkInfos(name):
 
 def printParkInfos():
     tree = etree.parse("tempo.xml")
-    for truc in tree.xpath("Name"):
-     print('Nom du parking :',truc.text)
-     infos.write(truc.text+";")
-    for truc in tree.xpath("Free"):
-     free=truc.text
-     print('Nombre de places libres :',truc.text)
-     infos.write(truc.text+";")
-    for truc in tree.xpath("Total"):
-     total=truc.text
-     print('Nombre de places totales',truc.text)
-     infos.write(truc.text+"\n")
-    for truc in tree.xpath("Status"):
-     print('Statut d\'ouverture ?',truc.text)
+    for item in tree.xpath("Name"):
+     print('Nom du parking :',item.text)
+     infos.write(item.text+";")
+    for item in tree.xpath("Free"):
+     free=item.text
+     print('Nombre de places libres :',item.text)
+     infos.write(item.text+";")
+    for item in tree.xpath("Total"):
+     total=item.text
+     print('Nombre de places totales',item.text)
+     infos.write(item.text+"\n")
+    for item in tree.xpath("Status"):
+     print('Statut d\'ouverture ?',item.text)
     print()
     return free, total
     
