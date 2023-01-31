@@ -28,9 +28,7 @@ for name in listeFichiers:
 for current in data:
     name=current["name"]
     dates=current["dates"]
-    print(dates)
     libre=current["places_occupees"]
-    print(libre)
     xpoints = dates #[dt.datetime.strptime(d,'%Y-%m-%d@%H-%M-%S').date() for d in dates]
     ypoints = libre
     plt.plot(xpoints, ypoints)
